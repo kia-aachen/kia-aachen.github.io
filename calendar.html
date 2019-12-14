@@ -109,7 +109,21 @@ ul.social-network li {
 .social-network a {
   background-color: #F9F9F9;
 }
-	 
+
+.googleCalendar{
+  position: relative;
+  height: 0;
+  width: 50%;
+  padding-bottom: 50%;
+}
+
+.googleCalendar iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}	 
 	 
 	 
 	</style>
@@ -182,15 +196,15 @@ ul.social-network li {
     <div class="container">
       <h4 class="my-4">Kalendar KIA</h4>
 
-<div class="row">
 
-  <div class="col-md-6 col-sm-12 mb-4">
 
-<iframe src="https://calendar.google.com/calendar/embed?src=kia.islam.aachen%40gmail.com&ctz=Europe%2FBerlin" style="border: 0" width="600" height="500" frameborder="0" scrolling="no"></iframe>
-
-  </div>
   
+<div class="googleCalendar">
+  <iframe src="https://calendar.google.com/calendar/embed?src=kia.islam.aachen%40gmail.com&ctz=Europe%2FBerlin" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
+
+
+  
 
     </div>
     <!--
