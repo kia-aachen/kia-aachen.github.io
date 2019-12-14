@@ -26,8 +26,15 @@
 	}	
 	
 	.jumbotron{
-		margin-bottom:0px;
+		/*background: #000 url("https://upload.wikimedia.org/wikipedia/commons/5/5b/Venice_Carnival_(2010).jpg") no-repeat center center; */
+		position: relative;
+		padding-top: 6em;
+		margin-bottom:10px;
+		width:100%;
+		height: 15em;
+		background-size: 100% 100%;
      }
+	 
 	 
 	 /*SOCİAL İCONS*/
 
@@ -110,21 +117,21 @@ ul.social-network li {
   background-color: #F9F9F9;
 }
 
-.googleCalendar{
-  position: relative;
-  height: 0;
-  width: 50%;
-  padding-bottom: 50%;
+calendar-container {
+    position: relative;
+    padding-bottom: 75% !important;
+    height: 0;
+    overflow: hidden;
 }
+calendar-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} 
+	
 
-.googleCalendar iframe{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}	 
-	 
 	 
 	</style>
 	
@@ -132,14 +139,8 @@ ul.social-network li {
 
   <body>
   
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h2 class="display-5">Keluarga Islam Aachen</h2>
-    <p class="lead">eine Islamische Familie in Aachen</p>
-  </div>
-</div>
   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container">
     <!--<a class="navbar-brand" href="#">Keluarga Islam Aachen</a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -193,8 +194,23 @@ ul.social-network li {
   </div>
 </nav>
 
+	<div class="container-full-bg">
+	<div class="jumbotron jumbotron-fluid">
+				<div class="row">
+				<div class="col-sm-12">	
+					    <h2 class="display-5 text-center">Keluarga Islam Aachen</h2>
+						<p class="lead text-center">eine Islamische Familie in Aachen</p>
+				</div>
+			</div>
+	</div>
+	</div>
+
+
+	
     <div class="container">
-      <h4 class="my-4">Makanan Halal di Aachen</h4>
+			<div class="row">
+				<div class="col-sm-11 offset-sm-1">	
+					<h4 class="my-4">Makanan Halal di Aachen</h4>
 
   
     
@@ -215,6 +231,8 @@ ul.social-network li {
         <a class="next" href="/2019/12/14/evening-routine.html">Bagian Kedua: Evening Routine &raquo;</a>
     
 </div>
+				</div>
+			</div>
     </div>
     <!--
 <footer class="py-2 bg-dark">
@@ -252,5 +270,8 @@ ul.social-network li {
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	
+	
   </body>
 </html>
