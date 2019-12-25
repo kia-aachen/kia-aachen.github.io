@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Sidik">
+    <meta name="description" content="Catatan Sidik">
+    <title>Catatan Sidik</title>
+	
+	<link rel="stylesheet" href="/static/css/pandoc.css">
+	
+</head>
+
+<body>
+    
+	 <h1><a href="/">Catatan Sidik</a></h1>
+	 
+	 <a href="/posts/">Posts</a> | <a href="/tag_list/">Tags</a>
+
+    <div>
+        
+
+<h2>Website Menggunakan Flask</h2
+<p>Yohan Sidik, 2019-12-25 | tags:  <a href="/tag/coba/"> coba </a></p>
+<p>Ini adalah dokumentasi sebuah website yang didesain menggunakan <a href="https://id.wikipedia.org/wiki/Flask">Flask</a>. Fitur website yang akan dikembangkan adalah:</p>
+<ul>
+<li>Menulis post dengan markdown.</li>
+<li>Pages:<ul>
+<li>Homepage</li>
+<li>Post page</li>
+<li>Tag page</li>
+</ul>
+</li>
+</ul>
+<p>Persyaratan untuk bisa mengikuti tutorial ini adalah mengetahui prinsip kerja dari Flask dan Jinja2. Sekarang lanjut ke detail tutorialnya sebagai berikut:</p>
+<h3>Folder Tree</h3>
+<p>Berikut ini adalah struktur folder yang akan digunakan pada tutorial ini.</p>
+<ul>
+<li>content<ul>
+<li>posts<ul>
+<li>website-flask.md</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>env</li>
+<li>static<ul>
+<li>css<ul>
+<li>pandoc.css</li>
+</ul>
+</li>
+<li>images</li>
+</ul>
+</li>
+<li>templates<ul>
+<li>base.html</li>
+<li>index.html</li>
+<li>post.html</li>
+<li>posts.html</li>
+<li>tag.html</li>
+<li>tag_list.html</li>
+</ul>
+</li>
+<li>server.py</li>
+</ul>
+<h3>Web Server</h3>
+<p>Website ini didesain dengan cara menulis <em>script</em> dengan format Python. <em>Script</em> ini berfungsi sebagai <a href="https://id.wikipedia.org/wiki/Server_web"><em>web server</em></a> yang akan menyediakan halaman berdasarkan <em>request</em> dari pengguna web.  </p>
+<p>Berikut ini adalah <em>minimal script</em> yang diberi nama server.py untuk mendesain web menggunakan Flask:</p>
+<pre><code>```
+import sys, os
+from flask import Flask, render_template
+from flask_flatpages import FlatPages
+from flask_frozen import Freezer
+
+DEBUG = True
+FLATPAGES_AUTO_RELOAD = DEBUG
+FLATPAGES_EXTENSION = '.md'
+FLATPAGES_ROOT = 'content'
+POST_DIR = 'posts'
+
+app = Flask(__name__)
+flatpages = FlatPages(app)
+freezer = Freezer(app)
+app.config.from_object(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/posts/")
+def posts():
+    posts=[p for p in flatpages if p.path.startswith(POST_DIR)]
+    posts.sort(key=lambda item:item['date'], reverse=True)
+    return render_template("posts.html",posts=posts)
+
+@app.route('/posts/&lt;name&gt;/')
+def post(name):
+    path = '{}/{}'.format(POST_DIR, name)
+    post= flatpages.get_or_404(path)
+    return render_template("post.html", post=post)
+
+#@app.route('/posts/&lt;name1&gt;/&lt;name2&gt;/')
+#def post_level2(name1,name2):
+#   path = '{}/{}/{}'.format(POST_DIR, name1,name2)
+#    post= flatpages.get_or_404(path)
+ #  return render_template("post.html", post=post)
+
+@app.route("/tag/&lt;name&gt;/")
+def tag(name):
+    posts=[p for p in flatpages if name in p.meta.get('tags',[])]
+    posts.sort(key=lambda item:item['date'], reverse=True)
+    return render_template("tag.html",posts=posts,name=name)
+
+@app.route("/tag_list/")
+def tag_list():
+    posts=[p for p in flatpages if p.path.startswith(POST_DIR)]
+    posts.sort(key=lambda item:item['date'], reverse=True)
+    return render_template("tag_list.html",posts=posts)
+
+# Modified Main
+if __name__ == "__main__":
+    if len(sys.argv) &gt; 1 and sys.argv[1] == "build":
+        freezer.freeze()
+    else:
+        app.run(port=8000)
+```
+</code></pre>
+<h3>Page</h3>
+<p>Tampilan semua page berdasarkan sebuah template dasar yang diberi nama <strong>base.html</strong>. </p>
+<pre><code>```
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="author" content="Sidik"&gt;
+    &lt;meta name="description" content="Catatan Sidik"&gt;
+    &lt;title&gt;Catatan Sidik&lt;/title&gt;
+
+    &lt;link rel="stylesheet" href="{{ url_for('static', filename='css/pandoc.css') }}"&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+     &lt;h1&gt;&lt;a href="/"&gt;Catatan Sidik&lt;/a&gt;&lt;/h1&gt;
+
+     &lt;a href="{{url_for('posts')}}"&gt;Posts&lt;/a&gt; | &lt;a href="{{url_for('tag_list')}}"&gt;Tags&lt;/a&gt;
+
+    &lt;div&gt;
+        {% block content %}
+        &lt;p&gt;Default Content&lt;/p&gt;
+        {% endblock content %}
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+```
+</code></pre>
+<p>Template dasar ini bisa digunakan untuk page lainnya dengan konten yang berbeda. Konten yang berbeda tersebut diisikan pada bagian <em>block content</em>. Untuk menggunakan template ini, cukup menuliskan fungsi <em>extends</em> seperti yang akan digunakan pada contoh page berikut ini.</p>
+<h4>Homepage</h4>
+<pre><code>```
+{% extends "base.html" %}
+
+{% block content %}
+
+&lt;p&gt; Website ini didesain menggunakan Flask. &lt;/p&gt;
+&lt;p&gt; Aachen, 2019-12-25&lt;/p&gt;
+
+{% endblock content %}
+```
+</code></pre>
+<h4>Post page</h4>
+<pre><code>    ```
+    {% extends "base.html" %}
+
+    {% block content %}
+
+    &lt;h2&gt;{{ post.title }}&lt;/h2
+    &lt;p&gt;{{ post.author}}, {{ post.date }} | tags:  &lt;a href="{{ url_for('tag', name=post.tags.replace('tag/', '')) }}"&gt; {{post.tags}} &lt;/a&gt;&lt;/p&gt;
+    {{ post.html|safe }}
+
+    {% endblock content %}
+    ```
+</code></pre>
+<h4>Tag Page</h4>
+<pre><code>```
+{% extends "base.html" %}
+
+{% block content %}
+
+&lt;h2&gt;tags: {{ name}}&lt;/h2&gt;
+
+&lt;ul&gt;
+{% for post in posts %}
+        &lt;li&gt;&lt;a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"&gt;{{ post.title }}&lt;/a&gt;
+        &lt;small&gt;{{ post.date }}&lt;/small&gt;
+        &lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;
+
+{% endblock content %}
+```
+</code></pre>
+<h4>Tag Page List</h4>
+<pre><code>```
+{% extends "base.html" %}
+
+{% block content %}
+
+&lt;h2&gt;Post berdasarkan tags:&lt;/h2&gt;
+
+&lt;h2&gt;Pinter&lt;/h2&gt;
+&lt;ul&gt;
+{% for post in posts %}
+{% if  'pinter' in post.tags %}
+        &lt;li&gt;&lt;a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"&gt;{{ post.title }}&lt;/a&gt;
+        &lt;small&gt;{{ post.date }}&lt;/small&gt;
+        &lt;/li&gt;   
+{% endif %}
+{% endfor %}
+&lt;/ul&gt;
+
+&lt;h2&gt;Coba&lt;/h2&gt;
+&lt;ul&gt;
+{% for post in posts %}
+{% if  'coba' in post.tags %}
+        &lt;li&gt;&lt;a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"&gt;{{ post.title }}&lt;/a&gt;
+        &lt;small&gt;{{ post.date }}&lt;/small&gt;
+        &lt;/li&gt;   
+{% endif %}
+{% endfor %}
+&lt;/ul&gt;
+
+&lt;h2&gt;Contoh&lt;/h2&gt;
+&lt;ul&gt;
+{% for post in posts %}
+{% if  'contoh' in post.tags %}
+        &lt;li&gt;&lt;a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"&gt;{{ post.title }}&lt;/a&gt;
+        &lt;small&gt;{{ post.date }}&lt;/small&gt;
+        &lt;/li&gt;   
+{% endif %}
+{% endfor %}
+&lt;/ul&gt;
+
+&lt;ul&gt;
+
+
+{% endblock content %}
+```
+</code></pre>
+
+
+    </div>
+	
+</body>
+</html>
