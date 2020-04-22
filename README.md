@@ -12,3 +12,7 @@ Untuk Post
 
 1. Untuk post di Ta'lim = pilih post-talim
 2. Selain itu pilih post
+
+# Run local
+
+- command windows: jekyll serve
