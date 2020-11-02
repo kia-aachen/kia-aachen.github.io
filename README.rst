@@ -47,10 +47,9 @@ Folder _site ini selanjutnya dijadikan git repo dengan cara:
 
 Agar post terbaru dapat muncul di website, maka data di repo _site harus dipush ke remote. 
 
-Catatan: 
+Catatan:
 
-Sebelum pull data ke repo _site, hapuslah semua data di folder tersebut. 
-Hal ini untuk menghindari konflik data. Setelah itu generate lagi data. 
+Sebelum mem-push data, terlebih dahulu pull data agar data tidak konflik. 
 
 Post
 ---------------------------------------------------------------------------------
