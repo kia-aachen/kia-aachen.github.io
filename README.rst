@@ -55,17 +55,36 @@ Hal ini untuk menghindari konflik data. Setelah itu generate lagi data.
 Post
 ---------------------------------------------------------------------------------
 
-Tag List
+Untuk melakukan post dengan kategori/tag di bawah ini, buatlah file markdown
+yang disimpan di folder _post. 
 
-1. Ta'lim Muslim
-2. Ta'lim Muslimah
-2. Lifehacks
-3. Seminar
-4. Halal
+- Ta'lim Muslim
+- Ta'lim Muslimah
+- Lifehacks
+- Seminar
+- Halal
 
-Untuk Post
+Contoh file markdown adalah:
 
-1. Untuk post di Ta'lim = pilih post-talim
-2. Selain itu pilih post
+::
+
+        ---
+        layout: post-talim
+        title: Ta'lim Muslimah Kesatu
+        author: Nadia
+        tag: "Ta'lim Muslimah"
+        ---
+
+        Tulislah konten web di sini. 
+
+
+Catatan:
+
+- Untuk post di Ta'lim = pilih post-talim
+- Selain itu pilih post
 
 .. _`Ruby+Devkit`: https://rubyinstaller.org/downloads/
+
+- Markdown 
+
+Markdown adalah *simple mark-up language*. Syntax dasarnya dapat dibaca `di sini <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_. 
