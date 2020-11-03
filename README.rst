@@ -3,6 +3,13 @@ Website KIA
 
 .. contents:: **Daftar Isi**
 
+Kenapa Menggunakan Ruby/Jekyll
+---------------------------------------------------------------------------------
+
+Ide dasarnya adalah membuat website dari kumpulan Markdown file. Syntax markdown
+file ini sederhana. Selanjutnya markdown file ini dikonversi menjadinya html
+oleh Jekyll. 
+
 Menjalankan Website
 ---------------------------------------------------------------------------------
 
@@ -54,16 +61,21 @@ Sebelum mem-push data, terlebih dahulu pull data agar data tidak konflik.
 Post
 ---------------------------------------------------------------------------------
 
-Untuk melakukan post dengan kategori/tag di bawah ini, buatlah file markdown
-yang disimpan di folder _post. 
+Ada 2 jenis konten yang bisa diupdate pada website ini, yaitu ``post`` dan
+``pages``.  Jenis ``post`` adalah konten yang berseri dalam artian konten jenis
+ini tidak hanya satu kali. Misalnya konten talim yang muncul secara berkala
+misalnya bulanan.  Konten post juga memiliki tag/kategori.  Sedangkan jenis
+``pages`` adalah konten yang muncul 1 kali saja. Pada bagian ini, akan dibahas
+cara membuat postingan dengan katetori ``post``.
 
-- Ta'lim Muslim
-- Ta'lim Muslimah
-- Lifehacks
-- Seminar
-- Halal
+Untuk melakukan post, buatlah file markdown yang disimpan di folder _post.
+File markdown tersebut harus disimpan dengan format:
 
-Contoh file markdown adalah:
+::
+
+        YYYY-MM-DD-short-title.md
+
+Contoh isi file markdown adalah:
 
 ::
 
@@ -76,6 +88,26 @@ Contoh file markdown adalah:
 
         Tulislah konten web di sini. 
 
+        ![](/assets/img/logo.jpeg)
+
+Apabila postingannya memiliki gambar, maka bisa gambar disimpan di folder:
+
+::
+
+        /assets/img/
+
+Kemudian gambar bisa disisipkan di dalam teks dengan cara:
+
+::
+
+        ![](/assets/img/logo.jpeg)
+
+Setiap tulisan yang berupa post harus memiliki tag. Tag yang sudah dibuat untuk
+website KIA ini adalah:
+
+- Ta'lim Muslim
+- Ta'lim Muslimah
+- Lifehacks
 
 Catatan:
 
@@ -84,6 +116,77 @@ Catatan:
 
 .. _`Ruby+Devkit`: https://rubyinstaller.org/downloads/
 
-- Markdown 
+Pages
+---------------------------------------------------------------------------------
 
-Markdown adalah *simple mark-up language*. Syntax dasarnya dapat dibaca `di sini <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_. 
+Tulisan yang berupa ``pages`` disimpan di dalam folder ``pages``. Pada website
+KIA ini, pages-nya terdiri dari:
+
+- gallery.md
+- grillen.md
+- kalender.md
+- pengajianGabungan.md
+- seminar.md
+- strukturOrganisasi.md
+- tentangAachen
+- tentangKIA
+
+Contoh format markdown file-nya adalah:
+
+::
+
+        ---
+        layout: default
+        ---
+
+        #### Gallery
+
+        **Logo KIA**
+
+        ![](img/logo.jpeg)
+
+Gambar untuk tulisan berupa ``pages`` disimpan di folder ``/pages/img``. Cara
+untuk menyisipkan gambar ke dalam teks adalah:
+
+::
+
+        ![](img/logo.jpeg)
+
+Homepage
+---------------------------------------------------------------------------------
+
+Homepage disimpan di dalam file index.md. Format filenya adalah:
+
+::
+
+        ---
+        layout: default
+        title: Home
+        ---
+
+        **Kegiatan Selanjutnya**
+
+        <img src="/assets/img/des2019.jpeg" width="500">
+
+Gambar disisipkan sama seperti dengan pages. File gambar juga disimpan di folder
+``assets/img``. Gambar juga disimpan dengan:
+
+::
+
+        ![](/assets/img/gambar.jpeg)
+
+Tetapi syntax markdown di atas memiliki limitasi, yaitu ukuran gambar tidak
+dapat diatur. Agar gambar bisa diatur, syntaxnya bisa mengikuti syntax html,
+yaitu:
+
+::
+
+        <img src="/assets/img/des2019.jpeg" width="500">
+
+Markdown 
+---------------------------------------------------------------------------------
+
+Markdown adalah *simple mark-up language*. Syntax dasarnya dapat dibaca di `cheatsheet`_
+
+.. _`cheatsheet`: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet> 
+
