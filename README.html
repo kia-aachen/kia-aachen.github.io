@@ -454,8 +454,9 @@ html,body{        margin: auto;
 <li><a class="reference internal" href="#homepage" id="id9">Homepage</a></li>
 <li><a class="reference internal" href="#insert-gambar" id="id10">Insert Gambar</a></li>
 <li><a class="reference internal" href="#insert-pdf" id="id11">Insert PDF</a></li>
-<li><a class="reference internal" href="#dokumentasi-website-kia" id="id12">Dokumentasi Website KIA</a></li>
-<li><a class="reference internal" href="#contributors" id="id13">Contributors</a></li>
+<li><a class="reference internal" href="#membuat-kategori-tag-baru-untuk-post" id="id12">Membuat Kategori/Tag Baru untuk Post</a></li>
+<li><a class="reference internal" href="#dokumentasi-website-kia" id="id13">Dokumentasi Website KIA</a></li>
+<li><a class="reference internal" href="#contributors" id="id14">Contributors</a></li>
 </ul>
 </div>
 <div class="section" id="alamat-web">
@@ -562,10 +563,10 @@ YYYY-MM-DD-short-title.md
 <p>Contoh isi file markdown adalah:</p>
 <pre class="literal-block">
 ---
-layout: post-talim
+layout: post
 title: Ta'lim Muslimah Kesatu
 author: Nadia
-tag: &quot;Ta'lim Muslimah&quot;
+tag: &quot;Talim-Muslimah&quot;
 ---
 
 Tulislah konten web di sini.
@@ -575,14 +576,12 @@ Tulislah konten web di sini.
 <p>Setiap tulisan yang berupa post harus memiliki tag. Tag yang sudah dibuat untuk
 website KIA ini adalah:</p>
 <ul class="simple">
-<li>Ta'lim Muslim</li>
-<li>Ta'lim Muslimah</li>
+<li>Talim-Muslim</li>
+<li>Talim-Muslimah</li>
+<li>Pengajian-Gabungan</li>
+<li>Grillen</li>
+<li>Seminar</li>
 <li>Lifehacks</li>
-</ul>
-<p>Catatan:</p>
-<ul class="simple">
-<li>Untuk post di Ta'lim = pilih post-talim</li>
-<li>Selain itu pilih post</li>
 </ul>
 <p>Referensi:</p>
 <ul class="simple">
@@ -595,10 +594,7 @@ website KIA ini adalah:</p>
 KIA ini, pages-nya terdiri dari:</p>
 <ul class="simple">
 <li>gallery.md</li>
-<li>grillen.md</li>
 <li>kalender.md</li>
-<li>pengajianGabungan.md</li>
-<li>seminar.md</li>
 <li>strukturOrganisasi.md</li>
 <li>tentangAachen.md</li>
 <li>tentangKIA.md</li>
@@ -683,8 +679,29 @@ didownload oleh pembaca. Cara insert-nya adalah:</p>
 [download pdf di sini](/assets/pdf/contoh.pdf)
 </pre>
 </div>
+<div class="section" id="membuat-kategori-tag-baru-untuk-post">
+<h1><a class="toc-backref" href="#id12">Membuat Kategori/Tag Baru untuk Post</a></h1>
+<p>Tag digunakan untuk mengkategorikan post. Penamaan tag tidak boleh memiliki
+spasi. Tag bisa dibuat bebas sesuai dengan kebutuhan. Tetapi halaman web untuk
+menampilkan semua post dalam tag tersebut harus dibuat dan disisipkan link-nya
+di menu navigasi.</p>
+<p>Cara buat halaman tag adalah dengan membuat markdown file dengan nama yang sama
+dengan tag-nya. Misalnya tag talim-muslim.html untuk tag talim-muslim atau
+Talim-Muslim. Format markdown file-nya adalah:</p>
+<pre class="literal-block">
+---
+layout: tagpage
+tag: Talim-Muslim
+---
+</pre>
+<p>Selanjutnya talim-muslim.html dapat dimasukkan ke menu navigasi dengan mengedit
+file berikut:</p>
+<pre class="literal-block">
+/_includes/navbar.html
+</pre>
+</div>
 <div class="section" id="dokumentasi-website-kia">
-<h1><a class="toc-backref" href="#id12">Dokumentasi Website KIA</a></h1>
+<h1><a class="toc-backref" href="#id13">Dokumentasi Website KIA</a></h1>
 <p>Dokumentasi KIA disimpan di README.rst. README.rst akan secara otomatis dirender
 oleh github.com. Namun, untuk keperluan pembacaan secara lokal, user bisa
 menggunakan text editor yang bernama <a class="reference external" href="https://github.com/retext-project/retext">ReText</a>. ReText bisa juga untuk
@@ -702,7 +719,7 @@ $ make all
 README.rst dapat dirender oleh github.</p>
 </div>
 <div class="section" id="contributors">
-<h1><a class="toc-backref" href="#id13">Contributors</a></h1>
+<h1><a class="toc-backref" href="#id14">Contributors</a></h1>
 <ul class="simple">
 <li>Yohan Fajar Sidik</li>
 <li>Muthia Aulawiyah</li>

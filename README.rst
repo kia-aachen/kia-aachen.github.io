@@ -277,8 +277,8 @@ menampilkan semua post dalam tag tersebut harus dibuat dan disisipkan link-nya
 di menu navigasi. 
 
 Cara buat halaman tag adalah dengan membuat markdown file dengan nama yang sama
-dengan tag-nya. Misalnya tag talim-muslim.html untuk tag talim-muslim atau
-Talim-Muslim. Format markdown file-nya adalah:
+dengan tag-nya. Misalnya tag Talim-Muslim.html untuk tag Talim-Muslim. Format
+markdown file-nya adalah:
 
 ::
 
