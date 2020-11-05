@@ -127,10 +127,10 @@ Contoh isi file markdown adalah:
 ::
 
         ---
-        layout: post-talim
+        layout: post
         title: Ta'lim Muslimah Kesatu
         author: Nadia
-        tag: "Ta'lim Muslimah"
+        tag: "Talim-Muslimah"
         ---
 
         Tulislah konten web di sini. 
@@ -141,15 +141,12 @@ Contoh isi file markdown adalah:
 Setiap tulisan yang berupa post harus memiliki tag. Tag yang sudah dibuat untuk
 website KIA ini adalah:
 
-- Ta'lim Muslim
-- Ta'lim Muslimah
+- Talim-Muslim
+- Talim-Muslimah
+- Pengajian-Gabungan
+- Grillen
+- Seminar
 - Lifehacks
-
-Catatan:
-
-- Untuk post di Ta'lim = pilih post-talim
-- Selain itu pilih post
-
 
 Referensi:
 
@@ -165,10 +162,7 @@ Tulisan yang berupa ``pages`` disimpan di dalam folder ``pages``. Pada website
 KIA ini, pages-nya terdiri dari:
 
 - gallery.md
-- grillen.md
 - kalender.md
-- pengajianGabungan.md
-- seminar.md
 - strukturOrganisasi.md
 - tentangAachen.md
 - tentangKIA.md
@@ -273,6 +267,33 @@ didownload oleh pembaca. Cara insert-nya adalah:
 ::
 
         [download pdf di sini](/assets/pdf/contoh.pdf)
+
+Membuat Kategori/Tag Baru untuk Post
+---------------------------------------------------------------------------------
+
+Tag digunakan untuk mengkategorikan post. Penamaan tag tidak boleh memiliki
+spasi. Tag bisa dibuat bebas sesuai dengan kebutuhan. Tetapi halaman web untuk
+menampilkan semua post dalam tag tersebut harus dibuat dan disisipkan link-nya
+di menu navigasi. 
+
+Cara buat halaman tag adalah dengan membuat markdown file dengan nama yang sama
+dengan tag-nya. Misalnya tag talim-muslim.html untuk tag talim-muslim atau
+Talim-Muslim. Format markdown file-nya adalah:
+
+::
+
+        ---
+        layout: tagpage
+        tag: Talim-Muslim
+        ---
+
+Selanjutnya talim-muslim.html dapat dimasukkan ke menu navigasi dengan mengedit
+file berikut:
+
+::
+
+        /_includes/navbar.html
+
 
 Dokumentasi Website KIA
 ---------------------------------------------------------------------------------
