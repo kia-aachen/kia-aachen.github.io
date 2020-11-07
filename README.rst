@@ -148,6 +148,17 @@ website KIA ini adalah:
 - Seminar
 - Lifehacks
 
+Git perintah
+*********************************************************************************
+
+Langkah-langkah untuk posting in git:
+
+- pull data ke web-dev-kia dan _site
+- simpan tulisan di _post 
+- run jekyll serve 
+- cek local server untuk melihat perubahan, setelah oke kemudian
+- push data _site dan web-dev-kia ke remote
+		
 Referensi:
 
 - `Jekyll: posts`_
