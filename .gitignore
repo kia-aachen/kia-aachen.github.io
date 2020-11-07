@@ -1,0 +1,6 @@
+#berisi file yang di-ignore oleh git
+README.rst
+README.html
+README.pdf
+Makefile
+github-pandoc

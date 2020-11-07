@@ -39,7 +39,7 @@ Markdown adalah *simple mark-up language*. Syntax dasarnya dapat dibaca di `chea
 
 .. _`cheatsheet`: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-Menjalankan Website
+Menjalankan Website Pertama Kalinya
 ---------------------------------------------------------------------------------
 
 Install Jekyll
@@ -55,7 +55,7 @@ Langkah-langkah untuk menginstall Jekyll:
         - Install Jekyll dengan command berikut: gem install jekyll bundler.
         - Cek apakah jekyll sudah terinstall di komputer anda dengan command berikut: jekyll -v.
 
-Run local
+Run Local
 *********************************************************************************
 
 Terdapat 2 buah repo di github kia untuk pengelolaan website ini, yaitu:
@@ -71,7 +71,7 @@ lokal folder, repo kia-aachen.github.io adalah folder ``_site``.
 
 Untuk menjalakan web pertama kalinya:
 
-1. Cone terlebih dahulu ``web-dev-kia`` dari akun github kia. 
+1. Clone terlebih dahulu ``web-dev-kia`` dari akun github kia. 
 2. Kemudian bukalah command prompt/git bash pada folder ``web-dev-kia`` dan jalankan: 
 
 ::
@@ -108,12 +108,15 @@ Sebelum mem-push data atau update data, terlebih dahulu pull data di folder
 Post
 ---------------------------------------------------------------------------------
 
+Membuat Post
+*********************************************************************************
+
 Ada 2 jenis konten yang bisa diupdate pada website ini, yaitu ``post`` dan
 ``pages``.  Jenis ``post`` adalah konten yang berseri dalam artian konten jenis
 ini tidak hanya satu kali. Misalnya konten talim yang muncul secara berkala
 misalnya bulanan.  Konten post juga memiliki tag/kategori.  Sedangkan jenis
 ``pages`` adalah konten yang muncul 1 kali saja. Pada bagian ini, akan dibahas
-cara membuat postingan dengan katetori ``post``.
+cara membuat postingan dengan kategori ``post``.
 
 Untuk melakukan post, buatlah file markdown yang disimpan di folder _post.
 File markdown tersebut harus disimpan dengan format:
@@ -130,7 +133,7 @@ Contoh isi file markdown adalah:
         layout: post
         title: Ta'lim Muslimah Kesatu
         author: Nadia
-        tag: "Talim-Muslimah"
+        tag: Talim-Muslimah
         ---
 
         Tulislah konten web di sini. 
@@ -148,16 +151,61 @@ website KIA ini adalah:
 - Seminar
 - Lifehacks
 
-Git perintah
+Membuat Kategori/Tag Baru untuk Post
 *********************************************************************************
 
-Langkah-langkah untuk posting in git:
+Tag digunakan untuk mengkategorikan post. Penamaan tag tidak boleh memiliki
+spasi. Tag bisa dibuat bebas sesuai dengan kebutuhan. Tetapi halaman web untuk
+menampilkan semua post dalam tag tersebut harus dibuat dan disisipkan link-nya
+di menu navigasi. 
 
-- pull data ke web-dev-kia dan _site
-- simpan tulisan di _post 
-- run jekyll serve 
-- cek local server untuk melihat perubahan, setelah oke kemudian
-- push data _site dan web-dev-kia ke remote
+Cara buat halaman tag adalah dengan membuat markdown file dengan nama yang sama
+dengan tag-nya. Misalnya tag Talim-Muslim.md untuk tag Talim-Muslim. Format
+markdown file-nya adalah:
+
+::
+
+        ---
+        layout: tagpage
+        tag: Talim-Muslim
+        ---
+
+Selanjutnya talim-muslim.html (dari folder ``_site`` dapat dimasukkan ke menu
+navigasi dengan mengedit file berikut:
+
+::
+
+        /_includes/navbar.html
+
+Git Perintah
+*********************************************************************************
+
+Langkah-langkah untuk update website ke github:
+
+- Pull data ke ``web-dev-kia`` dan ``_site``
+
+::
+
+        $ git pull origin master
+
+- Simpan tulisan di ``_post`` 
+- Run ``jekyll serve``
+- Cek Local Server untuk melihat perubahan 
+
+::
+
+        http://127.0.0.1:4000/
+
+- Push data ``_site`` dan ``web-dev-kia`` ke remote
+
+Caranya, navigasikan ke folder yang dituju, misalnya ``_site``, kemudian buka
+git bash:
+
+::
+
+        $ git add .
+        $ git commit -m "isi pesan"
+        $ git push origin master
 		
 Referensi:
 
@@ -279,31 +327,6 @@ didownload oleh pembaca. Cara insert-nya adalah:
 
         [download pdf di sini](/assets/pdf/contoh.pdf)
 
-Membuat Kategori/Tag Baru untuk Post
----------------------------------------------------------------------------------
-
-Tag digunakan untuk mengkategorikan post. Penamaan tag tidak boleh memiliki
-spasi. Tag bisa dibuat bebas sesuai dengan kebutuhan. Tetapi halaman web untuk
-menampilkan semua post dalam tag tersebut harus dibuat dan disisipkan link-nya
-di menu navigasi. 
-
-Cara buat halaman tag adalah dengan membuat markdown file dengan nama yang sama
-dengan tag-nya. Misalnya tag Talim-Muslim.html untuk tag Talim-Muslim. Format
-markdown file-nya adalah:
-
-::
-
-        ---
-        layout: tagpage
-        tag: Talim-Muslim
-        ---
-
-Selanjutnya talim-muslim.html dapat dimasukkan ke menu navigasi dengan mengedit
-file berikut:
-
-::
-
-        /_includes/navbar.html
 
 
 Dokumentasi Website KIA
