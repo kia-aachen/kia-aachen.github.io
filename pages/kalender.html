@@ -230,48 +230,26 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
 
 <p><br /></p>
 
-<h5 id="kalender-gregorianhijriah">Kalender Gregorian/Hijriah</h5>
+<h5 id="kalender-hijriah">Kalender Hijriah</h5>
 
 <hr />
 
-<div class="row">
-    <div class="col-sm">
-	    <div id="calendar"><input id="show-button" type="button" onclick="showMe();" /></div>
-		<script type="text/javascript">
-			var showBtn = document.getElementById('show-button'),
-				cal = new Calendar();
-			document.getElementById('calendar').appendChild(cal.getElement());
-			showMe();
+<div id="calendar"><input id="show-button" type="button" onclick="showMe();" value="Show Calendar" /></div>
+<script type="text/javascript">
+    var showBtn = document.getElementById('show-button'),
+        cal = new Calendar();
+    document.getElementById('calendar').appendChild(cal.getElement());
+    showMe();
 
-			cal.onHide = function() {
-				showBtn.style.display = 'block'
-			};
+    cal.onHide = function() {
+		cal.show();
+    };
 
-			function showMe() {
-				showBtn.style.display = 'none';
-				cal.show();
-			}
-		</script>
-    </div>
-    <div class="col-sm">
-      <div id="calendar"></div>
-		<script type="text/javascript">
-			var showBtn = document.getElementById('show-button'),
-				cal = new Calendar(true);
-			document.getElementById('calendar').appendChild(cal.getElement());
-			showMe();
-
-			cal.onHide = function() {
-				showBtn.style.display = 'block'
-			};
-
-			function showMe() {
-				showBtn.style.display = 'none';
-				cal.show();
-			}
-		</script>
-    </div>
-</div>
+    function showMe() {
+        showBtn.style.display = 'none';
+        cal.show();
+    }
+</script>
 
 
 
