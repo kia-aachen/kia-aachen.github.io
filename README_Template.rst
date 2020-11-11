@@ -157,7 +157,33 @@ Data navigasi disimpan di ``/_data/nav.yml``.
               url: /pages/gallery.html
             - page: Kalender KIA
               url: /pages/kalender.html
+			  
+Archive by Year
+---------------------------------------------------------------------------------
 
+::
+
+
+        <h4 class="my-4">{{page.title}}</h4>
+
+        <hr>
+
+        <div class="col-sm-10">
+                {% for post in site.posts %}
+                {% assign currentdate = post.date | date: "%Y" %}
+                {% if currentdate != date %}
+                    <br>
+                        <ul class="nav flex-column">
+                        <li><h4>{{ currentdate }}</h4></li>
+                        </ul>
+                {% assign date = currentdate %} 
+                {% endif %}
+                        <ul class="nav flex-column">
+                        <li>{{ post.date | date_to_long_string }}</li>
+                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        </ul>
+                {% endfor %}
+        </div>
 
 .. Referensi
 
