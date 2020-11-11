@@ -9,6 +9,10 @@
   <meta name="description" content="KIA Aachen adalah singkatan dari Keluarga Islam Aachen yang merupakan perhimpunan orang Indonesia yang beragama Islam di Aachen.">
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
+  <link rel="stylesheet" href="https://ZulNs.github.io/libs/calendar.css"/>
+  <script type="text/javascript" src="https://ZulNs.github.io/libs/hijri-date.js"></script>
+  <script type="text/javascript" src="https://ZulNs.github.io/libs/calendar.js"></script>
+
   <title>Kalender KIA - Keluarga Islam Aachen</title>
    <!--
   <link rel="stylesheet" href="/css/style.css">
@@ -216,8 +220,57 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
 
 <hr>
 
+<h5 id="kalender-kegiatan-kia">Kalender Kegiatan KIA</h5>
+
+<hr />
+
 <div class="responsiveCal">
 	<iframe style="border: 0;" src="https://calendar.google.com/calendar/embed?src=kia.islam.aachen%40gmail.com&amp;ctz=Europe%2FBerlin" frameborder="0" width="550" height="400" scrolling="yes"></iframe>
+</div>
+
+<p><br /></p>
+
+<h5 id="kalender-gregorianhijriah">Kalender Gregorian/Hijriah</h5>
+
+<hr />
+
+<div class="row">
+    <div class="col-sm">
+	    <div id="calendar"><input id="show-button" type="button" onclick="showMe();" /></div>
+		<script type="text/javascript">
+			var showBtn = document.getElementById('show-button'),
+				cal = new Calendar();
+			document.getElementById('calendar').appendChild(cal.getElement());
+			showMe();
+
+			cal.onHide = function() {
+				showBtn.style.display = 'block'
+			};
+
+			function showMe() {
+				showBtn.style.display = 'none';
+				cal.show();
+			}
+		</script>
+    </div>
+    <div class="col-sm">
+      <div id="calendar"></div>
+		<script type="text/javascript">
+			var showBtn = document.getElementById('show-button'),
+				cal = new Calendar(true);
+			document.getElementById('calendar').appendChild(cal.getElement());
+			showMe();
+
+			cal.onHide = function() {
+				showBtn.style.display = 'block'
+			};
+
+			function showMe() {
+				showBtn.style.display = 'none';
+				cal.show();
+			}
+		</script>
+    </div>
 </div>
 
 
@@ -267,7 +320,6 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
 				  </li>
 				
 				</ul>
-
 			
 			</div>
 			
