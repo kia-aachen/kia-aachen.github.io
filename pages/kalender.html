@@ -237,7 +237,7 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
 <div id="calendar"><input id="show-button" type="button" onclick="showMe();" value="Show Calendar" /></div>
 <script type="text/javascript">
     var showBtn = document.getElementById('show-button'),
-        cal = new Calendar();
+        cal = new Calendar(true);
     document.getElementById('calendar').appendChild(cal.getElement());
     showMe();
 
