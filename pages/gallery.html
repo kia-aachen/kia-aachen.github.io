@@ -18,11 +18,11 @@
   <link rel="stylesheet" href="/css/style.css">
   -->
   <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 	
-      <style>
+  <style>
 	
 	html {
 		position: relative;
@@ -33,7 +33,7 @@
 	}	
 	
 	.jumbotron{
-		/*background: #000 url("https://upload.wikimedia.org/wikipedia/commons/5/5b/Venice_Carnival_(2010).jpg") no-repeat center center; */
+		background-image: url("/assets/img/bg.png");
 		position: relative;
 		padding-top: 6em;
 		margin-bottom:10px;
@@ -43,115 +43,107 @@
      }
 
 	 
-	 
 	 /*SOCİAL İCONS*/
 
-/* footer social icons */
+	/* footer social icons */
 
-ul.social-network {
-  list-style: none;
-  display: inline;
-  margin-left: 0 !important;
-  padding: 0;
-}
+	ul.social-network {
+	  list-style: none;
+	  display: inline;
+	  margin-left: 0 !important;
+	  padding: 0;
+	}
 
-ul.social-network li {
-  display: inline;
-  margin: 0 5px;
-}
+	ul.social-network li {
+	  display: inline;
+	  margin: 0 5px;
+	}
+		 
+		 /* footer social icons */
+
+	.social-network a.icoFacebook:hover {
+	  background-color: #3B5998;
+	}
+
+	.social-network a.icoLinkedin:hover {
+	  background-color: #007bb7;
+	}
+
+	.social-network a.icoFacebook:hover i,
+	.social-network a.icoLinkedin:hover i {
+	  color: #fff;
+	}
+
+	.social-network a.socialIcon:hover,
+	.socialHoverClass {
+	  color: #44BCDD;
+	}
+
+	.social-circle li a {
+	  display: inline-block;
+	  position: relative;
+	  margin: 0 auto 0 auto;
+	  -moz-border-radius: 50%;
+	  -webkit-border-radius: 50%;
+	  border-radius: 50%;
+	  text-align: center;
+	  width: 30px;
+	  height: 30px;
+	  font-size: 15px;
+	}
+
+	.social-circle li i {
+	  margin: 0;
+	  line-height: 30px;
+	  text-align: center;
+	}
+
+	.social-circle li a:hover i,
+	.triggeredHover {
+	  -moz-transform: rotate(360deg);
+	  -webkit-transform: rotate(360deg);
+	  -ms--transform: rotate(360deg);
+	  transform: rotate(360deg);
+	  -webkit-transition: all 0.2s;
+	  -moz-transition: all 0.2s;
+	  -o-transition: all 0.2s;
+	  -ms-transition: all 0.2s;
+	  transition: all 0.2s;
+	}
+
+	.social-circle i {
+	  color: #595959;
+	  -webkit-transition: all 0.8s;
+	  -moz-transition: all 0.8s;
+	  -o-transition: all 0.8s;
+	  -ms-transition: all 0.8s;
+	  transition: all 0.8s;
+	}
+
+	.social-network a {
+	  background-color: #F9F9F9;
+	}
+
+	.responsiveCal {
 	 
-	 /* footer social icons */
-
-.social-network a.icoFacebook:hover {
-  background-color: #3B5998;
-}
-
-.social-network a.icoLinkedin:hover {
-  background-color: #007bb7;
-}
-
-.social-network a.icoFacebook:hover i,
-.social-network a.icoLinkedin:hover i {
-  color: #fff;
-}
-
-.social-network a.socialIcon:hover,
-.socialHoverClass {
-  color: #44BCDD;
-}
-
-.social-circle li a {
-  display: inline-block;
-  position: relative;
-  margin: 0 auto 0 auto;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
-}
-
-.social-circle li i {
-  margin: 0;
-  line-height: 30px;
-  text-align: center;
-}
-
-.social-circle li a:hover i,
-.triggeredHover {
-  -moz-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -ms--transform: rotate(360deg);
-  transform: rotate(360deg);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.social-circle i {
-  color: #595959;
-  -webkit-transition: all 0.8s;
-  -moz-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  -ms-transition: all 0.8s;
-  transition: all 0.8s;
-}
-
-.social-network a {
-  background-color: #F9F9F9;
-}
-
-.responsiveCal {
- 
-position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
- 
-}
- 
-.responsiveCal iframe {
- 
-position: absolute; top:0; left: 0; width: 100%; height: 100%;
- 
-}
+	position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
 	 
-	</style>
+	}
+	 
+	.responsiveCal iframe {
+	 
+	position: absolute; top:0; left: 0; width: 100%; height: 100%;
+	 
+	}
+	 
+   </style>
 	
 </head>
 
-  
-  <style type="text/css">
-  
-	.customJumboBg{
-		background-image: url("/assets/img/bg.png");
-	}
-  </style>
-  
+    
   <body class="bg-light" style="margin-bottom:0px">
     <div class="container bg-white" style="margin-top:0px">
-		<div class="jumbotron jumbotron-fluid customJumboBg">	
+		<div class="jumbotron jumbotron-fluid">	
 			<h1 class="display-5 text-center text-white">Keluarga Islam Aachen</h1>
 			<p class="lead text-center text-white">eine Islamische Familie in Aachen</p>
 		</div>
@@ -220,7 +212,7 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
 	
 		<div class="row">
 		
-			<div class="col-sm-8">
+			<div class="col-md-8">
 					<h4 class="my-4">Gallery</h4>
 
 <hr>
@@ -238,7 +230,7 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
 
 			</div>	
 			
-			<div class="col-sm-4">
+			<div class="col-md-4">
 
 				<h4 class="my-4">Post Terbaru</h4>
 				<hr>
@@ -290,7 +282,7 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
 				
 				<h4 class="my-4">Hubungi Kami</h4>
 				<hr>
-				<p>Keluarga Islam Aachen kia.islam.aachen@gmail.com </p>
+				<p>Keluarga Islam Aachen <br> kia.islam.aachen@gmail.com </p>
 				
 			
 			</div>
@@ -299,7 +291,7 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
 	
 		<div class="text-center py-2 bg-success" style="margin-top:150px "margin-bottom:0px">
     <ul class="social-network social-circle">
-		<li class="text-white">&copy; 2020 KIA </li>
+		<li class="text-white">&copy; <small>2019-2020 KIA </small></li>
         <li><a href="https://www.facebook.com/groups/519022388177966/" class="icoFacebook" title="Facebook Muslim KIA"><i class="fa fa-facebook"></i></a></li>
 		<li><a href="https://www.facebook.com/groups/784345584912744/?ref=share" class="icoFacebook" title="Facebook Muslimah KIA"><i class="fa fa-facebook"></i></a></li>
         <li><a href="https://instagram.com/kia_keluargaislamaachen?igshid=lx1rirn69lir" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
@@ -310,13 +302,12 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
     </div>
 	
 	
-		 <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	
-	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	
   </body>
+  
 </html>
