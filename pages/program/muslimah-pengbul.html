@@ -13,7 +13,7 @@
   <script type="text/javascript" src="https://ZulNs.github.io/libs/hijri-date.js"></script>
   <script type="text/javascript" src="https://ZulNs.github.io/libs/calendar.js"></script>
 
-  <title>Kalender KIA - Keluarga Islam Aachen</title>
+  <title>Program KIA Muslimah: Pengajian Bulanan - Keluarga Islam Aachen</title>
    <!--
   <link rel="stylesheet" href="/css/style.css">
   -->
@@ -135,6 +135,24 @@
 	position: absolute; top:0; left: 0; width: 100%; height: 100%;
 	 
 	}
+	
+	.dropdown-submenu {
+	  position: relative;
+	}
+
+	.dropdown-submenu a::after {
+	  transform: rotate(-90deg);
+	  position: absolute;
+	  right: 6px;
+	  top: .8em;
+	}
+
+	.dropdown-submenu .dropdown-menu {
+	  top: 0;
+	  left: 100%;
+	  margin-left: .1rem;
+	  margin-right: .1rem;
+	}
 	 
    </style>
 	
@@ -156,58 +174,116 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Beranda<span class="sr-only">(current)</span></a>
         </li>		 
 		
 		 
 		 <li class="nav-item dropdown active">
 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  About
+			  Tentang KIA
 			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			
-			  <a class="dropdown-item" href="/pages/tentangKIA.html">Tentang KIA</a>
-			
-			  <a class="dropdown-item" href="/pages/tentangAachen.html">Tentang Aachen</a>
-			
-			  <a class="dropdown-item" href="/pages/strukturOrganisasi.html">Struktur Organisasi</a>
-			
-			</div>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				
+				    
+					  <li><a class="dropdown-item" href="/pages/tentang_kia/anggaran-dasar.html">Anggaran Dasar</a></li>
+					
+				
+				    
+					  <li><a class="dropdown-item" href="/pages/tentang_kia/anggaran-rumah-tangga.html">Anggaran Rumah Tangga</a></li>
+					
+				
+				    
+					  <li><a class="dropdown-item" href="/pages/tentang_kia/struktur-organisasi.html">Struktur Organisasi</a></li>
+					
+				
+			</ul>
 		 </li>
 		 
 		 <li class="nav-item dropdown active">
 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  Program Kerja
+			  Program
 			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			
-			  <a class="dropdown-item" href="/pages/talim-muslim.html">Ta'lim Muslim</a>
-			
-			  <a class="dropdown-item" href="/pages/talim-muslimah.html">Ta'lim Muslimah</a>
-			
-			</div>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				
+				    
+					  <li class="dropdown-submenu">
+					  <a class="dropdown-item dropdown-toggle" href="#">Muslim</a>
+					  <ul class="dropdown-menu">
+					    
+						  <li><a class="dropdown-item" href="/pages/program/muslim-pengbul.html">Pengajian Bulanan</a></li>
+						
+					  </ul>
+					  </li>
+					
+				
+				    
+					  <li class="dropdown-submenu">
+					  <a class="dropdown-item dropdown-toggle" href="#">Muslimah</a>
+					  <ul class="dropdown-menu">
+					    
+						  <li><a class="dropdown-item" href="/pages/program/muslimah-olahraga.html">Olahraga</a></li>
+						
+						  <li><a class="dropdown-item" href="/pages/program/muslimah-pengbul.html">Pengajian Bulanan</a></li>
+						
+						  <li><a class="dropdown-item" href="/pages/program/muslimah-senioren-besuch.html">Senioren Besuch</a></li>
+						
+						  <li><a class="dropdown-item" href="/pages/program/muslimah-student-q-time.html">Student Q-Time</a></li>
+						
+						  <li><a class="dropdown-item" href="/pages/program/muslimah-tahsin.html">Tahsin</a></li>
+						
+						  <li><a class="dropdown-item" href="/pages/program/muslimah-tpa.html">Taman Pendidikan Al-Qur'an</a></li>
+						
+					  </ul>
+					  </li>
+					
+				
+				    
+					  <li class="dropdown-submenu">
+					  <a class="dropdown-item dropdown-toggle" href="#">Gabungan</a>
+					  <ul class="dropdown-menu">
+					    
+						  <li><a class="dropdown-item" href="/pages/program/pengajian-gabungan.html">Pengajian</a></li>
+						
+					  </ul>
+					  </li>
+					
+				
+			</ul>
+		 </li>
+		 
+		 <li class="nav-item dropdown active">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Extra
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				
+				    
+					  <li><a class="dropdown-item" href="/pages/extra/download.html">Download</a></li>
+					
+				
+				    
+					  <li><a class="dropdown-item" href="/pages/extra/kalender.html">Kalender KIA</a></li>
+					
+				
+				    
+					  <li><a class="dropdown-item" href="/pages/extra/perpustakaan-kia.html">Perpustakaan</a></li>
+					
+				
+				    
+					  <li><a class="dropdown-item" href="/pages/extra/archive.html">Post</a></li>
+					
+				
+			</ul>
 		 </li>
 		 
 		 
 			
 		 <li class="nav-item active">
-          <a class="nav-link" href="/pages/archive.html">Archive<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/pages/donasi.html">Donasi<span class="sr-only">(current)</span></a>
         </li>	
 			
 		 <li class="nav-item active">
-          <a class="nav-link" href="/pages/gallery.html">Gallery<span class="sr-only">(current)</span></a>
-        </li>	
-			
-		 <li class="nav-item active">
-          <a class="nav-link" href="/pages/perpustakaan-kia.html">Perpustakaan<span class="sr-only">(current)</span></a>
-        </li>	
-			
-		 <li class="nav-item active">
-          <a class="nav-link" href="/pages/pesan.html">Pesan<span class="sr-only">(current)</span></a>
-        </li>	
-			
-		 <li class="nav-item active">
-          <a class="nav-link" href="/pages/kalender.html">Kalender KIA<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/pages/pesan.html">Hubungi Kami<span class="sr-only">(current)</span></a>
         </li>	
 		
 		 
@@ -215,24 +291,15 @@
     </div>
 </nav>
 
-
-
 	
 		<div class="row">
 		
 			<div class="col-md-8">
-					<h4 class="my-4">Kalender KIA</h4>
+					<h4 class="my-4">Program KIA Muslimah: Pengajian Bulanan</h4>
 
 <hr>
 
-<h5 id="kalender-kegiatan-kia">Kalender Kegiatan KIA</h5>
-
-<hr />
-
-<div style="margin-top:17px;float:right;text-align:center;"><a href="https://www.al-habib.info/islamic-calendar/" style="font-size: 8px;color:red;text-decoration:none;"><img style="border:0px;WIDTH:100px;" alt="Islamic Calendar Widgets by Alhabib" border="0" src="https://js.al-habib.info/phpimg2.php?ic=blue&amp;it=rect&amp;ad=-1" /><br /></a></div>
-<div class="responsiveCal">
-	<iframe class="calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBerlin&amp;src=a2lhLmlzbGFtLmFhY2hlbkBnbWFpbC5jb20&amp;src=cHRibWRkaWlsZzlxbmlmaGNlMXY0Z3Y5OGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=cXM0NW9oOTNra2l1b2lzZnBwZGdhYXY0YjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=a2pyM2dhYzE2YXFqbGJoMzhoc2pqMWxmaDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YXV0b2ZidnJoaDUxcWZvN3Y4M2JxbmNlbXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=NWpnMDZwNTA4bXV2MHNocDh2OTA3ajVuZDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=Y241MzR1aXBjYjVpYjZsbDFjNGg4cmQ1dHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ajNhcmc4YmMybGVmdDVlbjRsMWR2ZG8wYmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uZ2VybWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4tZ2IuaXNsYW1pYyNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;color=%237CB342&amp;color=%23C0CA33&amp;color=%23D81B60&amp;color=%23F6BF26&amp;color=%23009688&amp;color=%238E24AA&amp;color=%23EF6C00&amp;color=%23795548&amp;color=%23A79B8E&amp;showTitle=0&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;" frameborder="0" scrolling="no"></iframe>
-</div>
+<p>Mohon maaf, konten belum tersedia.</p>
 
 
 			</div>	
@@ -321,6 +388,23 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+  }
+  var $subMenu = $(this).next('.dropdown-menu');
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass('show');
+  });
+
+
+  return false;
+});
+</script>
 	
   </body>
   
