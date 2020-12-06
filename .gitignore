@@ -1,8 +1,9 @@
 #berisi file yang di-ignore oleh git
 README.rst
 README.html
+README.pdf
 README_Template.html
 README_Template.rst
-README.pdf
+README_Template.pdf
 Makefile
 github-pandoc.css
