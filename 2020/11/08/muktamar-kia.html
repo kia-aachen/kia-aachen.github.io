@@ -1,484 +1,427 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Yohan Sidik">
-  <meta name="description" content="KIA Aachen adalah singkatan dari Keluarga Islam Aachen yang merupakan perhimpunan orang Indonesia yang beragama Islam di Aachen.">
-  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
-
-  <link rel="stylesheet" href="https://ZulNs.github.io/libs/calendar.css"/>
-  <script type="text/javascript" src="https://ZulNs.github.io/libs/hijri-date.js"></script>
-  <script type="text/javascript" src="https://ZulNs.github.io/libs/calendar.js"></script>
-
-  <title>Muktamar KIA 2020 - Keluarga Islam Aachen</title>
-   <!--
-  <link rel="stylesheet" href="/css/style.css">
-  -->
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!DOCTYPE HTML>
+<!--
+	ZeroFour by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	<link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="author" content="Yohan Sidik">
+	<meta name="description" content="KIA adalah singkatan dari Keluarga Islam Aachen yang merupakan perhimpunan orang Indonesia yang beragama Islam di Aachen.">
 	
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
-	
-  <style>
-	
-	html {
-		position: relative;
-	 }
-
-	body {
-		margin-bottom: 70px;
-	}	
-	
-	.jumbotron{
-		background: url("/assets/img/gallery/shalat-ied-2019.jpg") no-repeat center;
-		position: relative;
-		padding-top: 4em;
-		margin-bottom:10px;
-		width:100%;
-		height: 15em;
-		background-size: 100%;
-    }
-	
-	.pageHeader{
-		display: flex;
-		justify-content: center;
-		background-color: #000;
-		opacity: 0.7;
-		height: 6em;
-	}
-	
-	.headerLogo{
-		max-width: 7em;
-		opacity: 1;
-	}
-	
-	@media only screen and (max-width: 320px){	
-		.headerTitle h1, .headerTitle p{
-			font-size: initial;
-		}
-	}
-	
-	@media only screen and (max-width: 480px) and (min-width: 320px){	
-		.headerTitle h1, .headerTitle p{
-			font-size: medium;
-		}
-	}
-	
-	@media only screen and (max-width: 770px) and (min-width: 480px){	
-		.headerTitle h1, .headerTitle p{
-			font-size: x-large;
-		}
-	}
-
-	 
-	 /*SOCİAL İCONS*/
-
-	/* footer social icons */
-
-	ul.social-network {
-	  list-style: none;
-	  display: inline;
-	  margin-left: 0 !important;
-	  padding: 0;
-	}
-
-	ul.social-network li {
-	  display: inline;
-	  margin: 0 5px;
-	}
-		 
-		 /* footer social icons */
-
-	.social-network a.icoFacebook:hover {
-	  background-color: #3B5998;
-	}
-
-	.social-network a.icoLinkedin:hover {
-	  background-color: #007bb7;
-	}
-
-	.social-network a.icoFacebook:hover i,
-	.social-network a.icoLinkedin:hover i {
-	  color: #fff;
-	}
-
-	.social-network a.socialIcon:hover,
-	.socialHoverClass {
-	  color: #44BCDD;
-	}
-
-	.social-circle li a {
-	  display: inline-block;
-	  position: relative;
-	  margin: 0 auto 0 auto;
-	  -moz-border-radius: 50%;
-	  -webkit-border-radius: 50%;
-	  border-radius: 50%;
-	  text-align: center;
-	  width: 30px;
-	  height: 30px;
-	  font-size: 15px;
-	}
-
-	.social-circle li i {
-	  margin: 0;
-	  line-height: 30px;
-	  text-align: center;
-	}
-
-	.social-circle li a:hover i,
-	.triggeredHover {
-	  -moz-transform: rotate(360deg);
-	  -webkit-transform: rotate(360deg);
-	  -ms--transform: rotate(360deg);
-	  transform: rotate(360deg);
-	  -webkit-transition: all 0.2s;
-	  -moz-transition: all 0.2s;
-	  -o-transition: all 0.2s;
-	  -ms-transition: all 0.2s;
-	  transition: all 0.2s;
-	}
-
-	.social-circle i {
-	  color: #595959;
-	  -webkit-transition: all 0.8s;
-	  -moz-transition: all 0.8s;
-	  -o-transition: all 0.8s;
-	  -ms-transition: all 0.8s;
-	  transition: all 0.8s;
-	}
-
-	.social-network a {
-	  background-color: #F9F9F9;
-	}
-
-	.responsiveCal {
-	 
-	position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
-	 
-	}
-	 
-	.responsiveCal iframe {
-	 
-	position: absolute; top:0; left: 0; width: 100%; height: 100%;
-	 
-	}
-	
-	div.hijriCalendar {
-	 
-	position:relative; margin-top:17px; float:right; text-align:center;
-	 
-	}
-	
-	.dropdown-submenu {
-	  position: relative;
-	}
-
-	.dropdown-submenu a::after {
-	  transform: rotate(-90deg);
-	  position: absolute;
-	  right: 6px;
-	  top: .8em;
-	}
-
-	.dropdown-submenu .dropdown-menu {
-	  top: 0;
-	  left: 100%;
-	  margin-left: .1rem;
-	  margin-right: .1rem;
-	}
-	 
-   </style>
-	
+	<title>Muktamar KIA 2020 - Keluarga Islam Aachen</title>
+	<link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 
-    
-  <body class="bg-light" style="margin-bottom:0px">
-    <div class="container bg-white" style="margin-top:0px">
-		<div class="jumbotron jumbotron-fluid">
-			<div class="pageHeader">
-				<div class="headerTitle">
-					<h1 class="display-5 text-center text-white">Keluarga Islam Aachen</h1>
-					<p class="lead text-center text-white">eine Islamische Familie in Aachen</p>
-				</div>
-				<img class="headerLogo" src="/assets/img/logo_png.png" alt="logo KIA">
-			</div>
-		</div>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div class="container">
+
+						<!-- Header -->
+							<header id="header">
+								<div class="inner">
+
+									<!-- Logo -->
+										<h1><a href="/" id="logo" class="image logo"></a></h1>
+
+									<!-- Nav -->
+										<nav id="nav">
+	<ul>
+		<!-- Navigation Home -->
+		<li id="home"><a href="/">Beranda</a></li>
 		
-		<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <!--<a class="navbar-brand" href="#">Keluarga Islam Aachen</a> -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Beranda<span class="sr-only">(current)</span></a>
-        </li>		 
+		<!-- Navigation Dropdown -->
 		
-		 
-		 <li class="nav-item dropdown active">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  Tentang KIA
-			</a>
-			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				
-				    
-					  <li><a class="dropdown-item" href="/pages/tentang_kia/anggaran-dasar.html">Anggaran Dasar</a></li>
-					
-				
-				    
-					  <li><a class="dropdown-item" href="/pages/tentang_kia/anggaran-rumah-tangga.html">Anggaran Rumah Tangga</a></li>
-					
-				
-				    
-					  <li><a class="dropdown-item" href="/pages/tentang_kia/struktur-organisasi.html">Struktur Organisasi</a></li>
-					
-				
-			</ul>
-		 </li>
-		 
-		 <li class="nav-item dropdown active">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  Program
-			</a>
-			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				
-				    
-					  <li class="dropdown-submenu">
-					  <a class="dropdown-item dropdown-toggle" href="#">Muslim</a>
-					  <ul class="dropdown-menu">
-					    
-						  <li><a href="/pages/program/muslim-pengbul.html">Pengajian Bulanan</a></li>
-						
-						  <li><a href="/pages/program/muslim-seminar.html">Seminar KIA</a></li>
-						
-						  <li><a href="/pages/program/muslim-tahsin-dan-tahfiz.html">Tahsin dan Tahfiz</a></li>
-						
-					  </ul>
-					  </li>
-					
-				
-				    
-					  <li class="dropdown-submenu">
-					  <a class="dropdown-item dropdown-toggle" href="#">Muslimah</a>
-					  <ul class="dropdown-menu">
-					    
-						  <li><a href="/pages/program/muslimah-olahraga.html">Olahraga</a></li>
-						
-						  <li><a href="/pages/program/muslimah-pengbul.html">Pengajian Bulanan</a></li>
-						
-						  <li><a href="/pages/program/muslimah-senioren-besuch.html">Senioren Besuch</a></li>
-						
-						  <li><a href="/pages/program/muslimah-student-q-time.html">Student Q-Time</a></li>
-						
-						  <li><a href="/pages/program/muslimah-tahsin.html">Tahsin</a></li>
-						
-						  <li><a href="/pages/program/muslimah-tpa.html">Taman Pendidikan Al-Qur'an</a></li>
-						
-					  </ul>
-					  </li>
-					
-				
-				    
-					  <li class="dropdown-submenu">
-					  <a class="dropdown-item dropdown-toggle" href="#">Gabungan</a>
-					  <ul class="dropdown-menu">
-					    
-						  <li><a href="/pages/program/pengajian-gabungan.html">Pengajian</a></li>
-						
-					  </ul>
-					  </li>
-					
-				
-			</ul>
-		 </li>
-		 
-		 <li class="nav-item dropdown active">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  Extra
-			</a>
-			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				
-				    
-					  <li><a class="dropdown-item" href="/pages/extra/download.html">Download</a></li>
-					
-				
-				    
-					  <li><a class="dropdown-item" href="/pages/extra/kalender.html">Kalender KIA</a></li>
-					
-				
-				    
-					  <li><a class="dropdown-item" href="/pages/extra/perpustakaan-kia.html">Perpustakaan</a></li>
-					
-				
-				    
-					  <li><a class="dropdown-item" href="/pages/extra/archive.html">Post</a></li>
-					
-				
-			</ul>
-		 </li>
-		 
-		 
+		
+		<li id="tentang_kia">
+			<a href="#">Tentang KIA</a>
+			<ul>
 			
-		 <li class="nav-item active">
-          <a class="nav-link" href="/pages/donasi.html">Donasi<span class="sr-only">(current)</span></a>
-        </li>	
+				
+					<li><a href="/pages/tentang_kia/visi">Visi</a></li>
+				
 			
-		 <li class="nav-item active">
-          <a class="nav-link" href="/pages/pesan.html">Hubungi Kami<span class="sr-only">(current)</span></a>
-        </li>	
+				
+					<li><a href="/pages/tentang_kia/misi">Misi</a></li>
+				
+			
+				
+					<li><a href="/pages/tentang_kia/struktur-organisasi">Struktur Organisasi</a></li>
+				
+			
+			</ul>
+		</li>
 		
-		 
-      </ul>
-    </div>
+		<li id="program">
+			<a href="#">Program</a>
+			<ul>
+			
+				
+					<li>
+						<a href="#">Muslim</a>
+						<ul>
+						
+							<li><a href="/pages/program/muslim-pengbul">Pengajian Bulanan</a></li>
+						
+							<li><a href="/pages/program/muslim-seminar">Seminar KIA</a></li>
+						
+							<li><a href="/pages/program/muslim-tahsin-dan-tahfiz">Tahsin dan Tahfiz</a></li>
+						
+						</ul>
+					</li>
+				
+			
+				
+					<li>
+						<a href="#">Muslimah</a>
+						<ul>
+						
+							<li><a href="/pages/program/muslimah-olahraga">Olahraga</a></li>
+						
+							<li><a href="/pages/program/muslimah-pengbul">Pengajian Bulanan</a></li>
+						
+							<li><a href="/pages/program/muslimah-senioren-besuch">Senioren Besuch</a></li>
+						
+							<li><a href="/pages/program/muslimah-student-q-time">Student Q-Time</a></li>
+						
+							<li><a href="/pages/program/muslimah-tahsin">Tahsin</a></li>
+						
+							<li><a href="/pages/program/muslimah-tpa">TPA</a></li>
+						
+						</ul>
+					</li>
+				
+			
+				
+					<li>
+						<a href="#">Gabungan</a>
+						<ul>
+						
+							<li><a href="/pages/program/pengajian-gabungan">Pengajian</a></li>
+						
+						</ul>
+					</li>
+				
+			
+			</ul>
+		</li>
+		
+		<li id="extra">
+			<a href="#">Extra</a>
+			<ul>
+			
+				
+					<li><a href="/pages/extra/download">Download</a></li>
+				
+			
+				
+					<li><a href="/pages/extra/kalender">Kalender KIA</a></li>
+				
+			
+				
+					<li><a href="/pages/extra/perpustakaan-kia">Perpustakaan</a></li>
+				
+			
+				
+					<li><a href="/pages/extra/archive">Archive</a></li>
+				
+			
+			</ul>
+		</li>
+		
+		
+		<!-- Navigation Single -->
+		
+		<li id="infaq"><a href="/pages/infaq">Infaq</a></li>
+		
+		<li id="pesan"><a href="/pages/pesan">Hubungi Kami</a></li>
+		
+	</ul>
 </nav>
 
+								</div>
+							</header>
+
+						
+
+					</div>
+				</div>
+
+			<!-- Main Wrapper -->
+				<div id="main-wrapper">
+					<div class="wrapper style2">
+	<div class="inner">
+		<div class="container">
+			<div class="row">
+				<div class="col-8 col-12-medium">
+					<div id="content">
+
+						<!-- Content -->
+
+							<article>
+								<header class="major">
+									<h2>Muktamar KIA 2020</h2>
+									
+									
+										<p>
+										
+										
+											Kategori:  <a href="/tags/Info"><code class="highligher-rouge"><nobr>Info</nobr></code>&nbsp;</a>
+										
+										</p>
+									
+								</header>
+								
+								
+									<span class="image featured"><img src="/assets/img/posters/muktamarkia2020.png" alt="Poster" /></span>
+								
+
+								<p>Link pendaftaran: <a href="https://bit.ly/MuktamarKIA">https://bit.ly/MuktamarKIA</a>.</p>
+
+
+<footer>
+<div class="row">
 	
-		<div class="row">
-		
-			<div class="col-md-8">
-					<h4 class="my-4">Muktamar KIA 2020</h4>
-
-  
-    
-    Kategori:  <a href="/tags/Info"><code class="highligher-rouge"><nobr>Info</nobr></code>&nbsp;</a>
-  
-
-<p>08 November 2020 - oleh Admin</p>
-
-<hr>
-
-<div class="text-center">
-<figure>
-	<img src="/assets/img/posters/muktamarkia2020.png" class="img-fluid img-thumbnail">
-</figure>
+	<div class="col-6 col-12-medium">
+		<a class="prev" style="float: left" href="/2020/11/06/Healthy-Food-Ala-Rasulullah.html">&laquo; Healthy Food Ala Rasulullah</a>
+	</div>
+	
+	
+	
+	<div class="col-6 col-12-medium">
+		<a class="next" style="float: right" href="/2020/11/25/proker-muslimah.html">Program Kerja Muslimah KIA 2020/21 &raquo;</a>
+	</div>
+	
 </div>
+</footer>
+							</article>
 
-<p>Link pendaftaran: <a href="https://bit.ly/MuktamarKIA">https://bit.ly/MuktamarKIA</a>.</p>
+					</div>
+				</div>
+				<div class="col-4 col-12-medium">
+					<div id="sidebar">
 
+						<!-- Sidebar -->
 
+							<section>
+								<div class="hijriCalendar"><a target="_blank" href="https://www.al-habib.info/islamic-calendar/"  style="font-size: 8px;color:red;text-decoration:none;"><img style="border:0px;" alt="Islamic Calendar Widgets by Alhabib" border="0" src="https://js.al-habib.info/phpimg2.php?ic=green&it=rect&ad=-1"><br/></a></div>
+							</section>
+						
+							<section>
+								<header class="major">
+									<h2>Kategori</h2>
+								</header>
+								<ul class="divided">
+								
+								
+									
+									
+									<li><a href="/tags/Info"> Info  (12)</a></li>
+								
+									
+									
+									<li><a href="/tags/Rangkuman-Materi"> Rangkuman Materi  (1)</a></li>
+								
+									
+									
+									<li><a href="/tags/Tips"> Tips  (6)</a></li>
+								
+								</ul>
+							</section>
+							
+							<section>
+								<header class="major">
+								<h2>Subscribe Email KIA</h2>
+								</header>
+								<p>Update info terbaru dari KIA 💐💐</p>
+								<ul class="divided">
+									<li><a target="_blank" href="https://forms.gle/NG3ytdq1DkAJZ8fF7" class="button alt icon solid fa-newspaper">Subscribe</a></li>
+								</ul>
+							</section>
 
-<hr>
-<br>
+							<section>
+								<header class="major">
+									<h2>Tautan</h2>
+								</header>
+								<ul class="style2">
+									<li>
+										<a target="_blank" href="https://www.instagram.com/forkom.jerman/" class="image post"><img src="/assets/img/gallery/forkom.jpg" alt="" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.instagram.com/ppiaachen/" class="image post"><img src="/assets/img/gallery/ppi_aachen.jpg" alt="" /></a>
+									</li>
+								</ul>
+							</section>
 
-<div class="PageNavigation">
-    
-        <a class="prev" href="/2020/11/06/Healthy-Food-Ala-Rasulullah.html">&laquo; Healthy Food Ala Rasulullah</a>
-    
-	&ensp;
-    
-        <a class="next" href="/2020/11/25/proker-muslimah.html">Program Kerja Muslimah KIA 2020/21 &raquo;</a>
-    
-</div>
-			</div>	
-			
-			<div class="col-md-4">
-
-				<h4 class="my-4">Artikel Terbaru</h4>
-				<hr>
-
-				<ul class="nav flex-column">
-				
-				  <li class="nav-item">
-					<small>11 December 2020</small> <br> <a href="/2020/12/11/undangan-seminar-01.html">Undangan Seminar KIA 20.12.2020</a> 
-				  </li>
-				
-				  <li class="nav-item">
-					<small>10 December 2020</small> <br> <a href="/2020/12/10/undangan-tpa-01.html">Undangan Taman Pendidikan Al Qur’an 12.12.2020</a> 
-				  </li>
-				
-				  <li class="nav-item">
-					<small>10 December 2020</small> <br> <a href="/2020/12/10/undangan-tahsin-01.html">Undangan Tahsin Al Qur’an 12.12.2020</a> 
-				  </li>
-				
-				  <li class="nav-item">
-					<small>05 December 2020</small> <br> <a href="/2020/12/05/undangan-sport-01.html">Undangan Olahraga 06.12.2020</a> 
-				  </li>
-				
-				</ul>
-				
-				<h4 class="my-4">Kategori</h4>
-				<hr>
-				
-				<ul class="nav flex-column">
-				
-				
-				  
-				  
-				  <li class="nav-item">
-					<a href="/tags/Info"> Info  (11) </a>
-				  </li>
-				
-				  
-				  
-				  <li class="nav-item">
-					<a href="/tags/Pengajian-Gabungan"> Pengajian Gabungan  (1) </a>
-				  </li>
-				
-				  
-				  
-				  <li class="nav-item">
-					<a href="/tags/Tips"> Tips  (6) </a>
-				  </li>
-				
-				</ul>
-				
-				<!--
-				<h4 class="my-4">Hubungi Kami</h4>
-				<hr>
-				<p>Keluarga Islam Aachen <br> kia.islam.aachen@gmail.com </p>
-				-->
-				
-				<h4 class="my-4">Subscribe Email KIA</h4>
-				<hr>
-				<p>Update info terbaru dari KIA 💐💐</p>
-				<a target="_blank" class="btn btn-primary" href="https://forms.gle/NG3ytdq1DkAJZ8fF7">Subscribe</a>
-			
+					</div>
+				</div>
 			</div>
-			
 		</div>
-	
-		<div class="text-center py-2 bg-success" style="margin-top:150px "margin-bottom:0px">
-    <ul class="social-network social-circle">
-		<li class="text-white">&copy; <small>2019-2020 KIA </small></li>
-        <li><a target="_blank" href="https://www.facebook.com/groups/519022388177966/" class="icoFacebook" title="Facebook Muslim KIA"><i class="fa fa-facebook"></i></a></li>
-		<li><a target="_blank" href="https://www.facebook.com/groups/784345584912744/?ref=share" class="icoFacebook" title="Facebook Muslimah KIA"><i class="fa fa-facebook"></i></a></li>
-        <li><a target="_blank" href="https://www.instagram.com/kia_aachen/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-		<li><a target="_blank" href="https://www.youtube.com/channel/UCm1BxDB9nlW-aDdTwieF8hA" class="icoYoutube" title="Youtube"><i class="fa fa-youtube"></i></a></li>
-		<li><a target="_blank" href="mailto:kia.islam.aachen@gmail.com" class="icoMail" title="E-Mail"><i class="fa fa-envelope"></i></a></li>
-    </ul>	
-</div>	
-			
-    </div>
-	
-	
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script>
-$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
-  if (!$(this).next().hasClass('show')) {
-    $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
-  }
-  var $subMenu = $(this).next('.dropdown-menu');
-  $subMenu.toggleClass('show');
+	</div>
+</div>
+					<div class="wrapper style3">
+						<div class="inner">
+										
+							<section class="container box feature1">
+								<h2 class="icon fa-calendar-alt">Info Kegiatan</h2>
+								<div class="row">
+									
+														
+									<div class="col-4 col-12-medium">
+										<section>
+											<a href="/2020/12/12/undangan-pengbul-muslim-01.html" class="image featured">
+												
+													<img src="/assets/img/posters/PosterKIA_Muslim_TalimBulananDec_Portrait.jpg" alt="Poster" />
+												
+												<br />
+												<span class="date">12 December 2020</span>
+												<h3>Undangan Ta'lim Bulanan Muslim 19.12.2020</h3>
+											</a>
+										</section>
+									</div>
+									
+									
+														
+									<div class="col-4 col-12-medium">
+										<section>
+											<a href="/2020/12/11/undangan-seminar-01.html" class="image featured">
+												
+													<img src="/assets/img/posters/seminar-kia-20122020.jpeg" alt="Poster" />
+												
+												<br />
+												<span class="date">11 December 2020</span>
+												<h3>Undangan Seminar KIA 20.12.2020</h3>
+											</a>
+										</section>
+									</div>
+									
+									
+														
+									<div class="col-4 col-12-medium">
+										<section>
+											<a href="/2020/12/10/undangan-tpa-01.html" class="image featured">
+												
+													<img src="/assets/img/posters/PosterKIA_Muslimah_TPADec_Square.png" alt="Poster" />
+												
+												<br />
+												<span class="date">10 December 2020</span>
+												<h3>Undangan TPA (Taman Pendidikan Al Qur’an) 12.12.2020</h3>
+											</a>
+										</section>
+									</div>
+									
+									
+								</div>
+								<ul class="divided">
+									<li><a href="/tags/Info" class="button large icon solid fa-arrow-right">Lihat semua info</a></li>
+								</ul>
+							</section>
+										
+						</div>
+					</div>
+				</div>
 
+			<!-- Footer Wrapper -->
+				<div id="footer-wrapper">
+	<footer id="footer" class="container">
+		<div class="row">
+			<div class="col-4 col-12-medium">
 
-  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-    $('.dropdown-submenu .show').removeClass('show');
-  });
+				<!-- Links -->
+					<section>
+						<h2>Artikel Terbaru</h2>
+						<ul class="divided">
+						
+						<li>
+							<small>12 December 2020</small><br /><a href="/2020/12/12/undangan-pengbul-muslim-01.html">Undangan Ta'lim Bulanan Muslim 19.12.2020</a> 
+						</li>
+						
+						<li>
+							<small>11 December 2020</small><br /><a href="/2020/12/11/undangan-seminar-01.html">Undangan Seminar KIA 20.12.2020</a> 
+						</li>
+						
+						<li>
+							<small>10 December 2020</small><br /><a href="/2020/12/10/undangan-tpa-01.html">Undangan TPA (Taman Pendidikan Al Qur’an) 12.12.2020</a> 
+						</li>
+						
+						<li>
+							<small>10 December 2020</small><br /><a href="/2020/12/10/undangan-tahsin-01.html">Undangan Tahsin Al Qur’an 12.12.2020</a> 
+						</li>
+						
+						<li>
+							<small>05 December 2020</small><br /><a href="/2020/12/05/undangan-sport-01.html">Undangan Olahraga 06.12.2020</a> 
+						</li>
+						
+						<li>
+							<small>03 December 2020</small><br /><a href="/2020/12/03/undangan-sqt-01.html">Undangan Student Q-Time 05.12.2020</a> 
+						</li>
+						
+						</ul>
+					</section>
 
+			</div>
+			<div class="col-6 col-12-medium">
 
-  return false;
-});
-</script>
-	
-  </body>
-  
+				<!-- About -->
+					<section>
+						<h2>Keluarga Islam Aachen</h2>
+						<p>KIA adalah singkatan dari Keluarga Islam Aachen yang merupakan perhimpunan orang Indonesia yang beragama Islam di Aachen.</p>
+					</section>
+
+				<!-- Contact -->
+					<section>
+						<h2>Kontak</h2>
+						<div>
+							<div class="row">
+								<div class="col-12">
+									<dl class="contact">
+										<dt>E-Mail</dt>
+										<dd><a target="_blank" href="mailto:kia.islam.aachen@gmail.com">kia.islam.aachen@gmail.com</a></dd>
+										<dt>Facebook-Akhwat</dt>
+										<dd><a target="_blank" href="https://bit.ly/group-fb-muslimah">bit.ly/group-fb-muslimah</a></dd>
+										<dt>Facebook-Ikhwan</dt>
+										<dd><a target="_blank" href="https://bit.ly/group-fb-muslim">bit.ly/group-fb-muslim</a></dd>
+										<dt>Instagram</dt>
+										<dd><a target="_blank" href="https://www.instagram.com/kia_aachen/">@kia_aachen</a></dd>
+										<dt>Telegram</dt>
+										<dd><a target="_blank" href="https://t.me/kia_aachen">@kia_aachen</a></dd>
+										<dt>YouTube</dt>
+										<dd><a target="_blank" href="https://bit.ly/KIA-Youtube">KIA Keluarga Islam Aachen</a></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</section>
+
+			</div>
+			<div class="col-12">
+				<div id="copyright">
+					<ul class="menu">
+						<li>&copy; 2019 Keluarga Islam Aachen. All rights reserved</li><li>Design: <a target="_blank" href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.dropotron.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+	</body>
 </html>
