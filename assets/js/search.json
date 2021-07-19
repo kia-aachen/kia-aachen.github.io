@@ -41,6 +41,14 @@
     } ,
   
     {
+      "title"    : "Ruqyah Syar&#39;iyyah",
+      "category" : "",
+      "tags"     : "Video-dan-Rangkuman",
+      "url"      : "/2021/06/19/Ruqyah-Syariyyah.html",
+      "date"     : "2021-06-19 00:00:00 +0200"
+    } ,
+  
+    {
       "title"    : "Pengajian Gabungan KIA: Ruqyah Syar&#39;iyyah",
       "category" : "",
       "tags"     : "Info",
@@ -62,6 +70,14 @@
       "tags"     : "Info",
       "url"      : "/2021/06/03/halal-bi-halal-kjri.html",
       "date"     : "2021-06-03 00:00:00 +0200"
+    } ,
+  
+    {
+      "title"    : "KIA Talkshow - Refleksi Bulan Ramadhan dan Rencana di Bulan Syawal",
+      "category" : "",
+      "tags"     : "Video-dan-Rangkuman",
+      "url"      : "/2021/05/30/KIA-Talkshow-refleksi-bulan-ramadhan-dan-rencana-di-bulan-syawal.html",
+      "date"     : "2021-05-30 00:00:00 +0200"
     } ,
   
     {
@@ -249,14 +265,6 @@
     } ,
   
     {
-      "title"    : "Manajemen Hati",
-      "category" : "",
-      "tags"     : "Rangkuman-Materi",
-      "url"      : "/2021/04/05/manajemen-hati.html",
-      "date"     : "2021-04-05 00:00:00 +0200"
-    } ,
-  
-    {
       "title"    : "Hadits 36 - Balasan itu Sejenis dengan Amalan",
       "category" : "",
       "tags"     : "KIA-menyambut-Ramadhan-2021",
@@ -382,6 +390,14 @@
       "tags"     : "KIA-menyambut-Ramadhan-2021",
       "url"      : "/2021/03/22/Hadits-22.html",
       "date"     : "2021-03-22 00:00:00 +0100"
+    } ,
+  
+    {
+      "title"    : "Syukur – Beragama dengan Ceria",
+      "category" : "",
+      "tags"     : "Video-dan-Rangkuman",
+      "url"      : "/2021/03/21/Syukur-beragama-dengan-ceria.html",
+      "date"     : "2021-03-21 00:00:00 +0100"
     } ,
   
     {
@@ -585,6 +601,30 @@
     } ,
   
     {
+      "title"    : "Kisah Sahabat Rasulullah saw. Mush‘ab bin ‘Umair r.a",
+      "category" : "",
+      "tags"     : "Video-dan-Rangkuman",
+      "url"      : "/2021/02/28/Kisah-sahabat-Rasulullah-Mushab-bin-Umair.html",
+      "date"     : "2021-02-28 00:00:00 +0100"
+    } ,
+  
+    {
+      "title"    : "Manajemen Hati",
+      "category" : "",
+      "tags"     : "Video-dan-Rangkuman",
+      "url"      : "/2021/01/23/manajemen-hati.html",
+      "date"     : "2021-01-23 00:00:00 +0100"
+    } ,
+  
+    {
+      "title"    : "Ikhlas Kunci Diterimanya Amal Ibadah",
+      "category" : "",
+      "tags"     : "Video-dan-Rangkuman",
+      "url"      : "/2020/12/19/Ikhlas-kunci-diterimanya-amal-ibadahibadah.html",
+      "date"     : "2020-12-19 00:00:00 +0100"
+    } ,
+  
+    {
       "title"    : "Undangan Pengajian Bulanan Muslimah 19.12.2020",
       "category" : "",
       "tags"     : "Info",
@@ -715,7 +755,7 @@
     {
       "title"    : "Rasulullah dan Prinsip I’tikaf",
       "category" : "",
-      "tags"     : "Rangkuman-Materi",
+      "tags"     : "Video-dan-Rangkuman",
       "url"      : "/2020/05/09/Rasulullah-dan-Prinsip-Itikaf.html",
       "date"     : "2020-05-09 00:00:00 +0200"
     } ,
