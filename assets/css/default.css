@@ -3958,6 +3958,10 @@ blockquote {
   margin-inline: 0.2rem;
 }
 
+.about-hero_wrap .heading-style-h1 .is-word {
+  margin-inline: 1rem;
+}
+
 .bottom-cta_wrap {
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
