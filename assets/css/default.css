@@ -3878,7 +3878,7 @@ blockquote {
   z-index: 100;
   justify-content: center;
   align-items: center;
-  width: 10.5625rem;
+  width: 9rem;
   padding-left: 0;
   display: flex;
   position: absolute;
@@ -4614,7 +4614,7 @@ blockquote {
   }
 
   .nav_brand {
-    width: 12rem;
+    width: 7rem;
     position: relative;
   }
 
