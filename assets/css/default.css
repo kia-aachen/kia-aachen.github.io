@@ -3382,7 +3382,7 @@ blockquote {
   display: grid;
 }
 
-.locations_visual {
+.locations_visual, .events_visual {
   aspect-ratio: 330 / 180;
   border-radius: 1.5rem;
   width: 100%;
